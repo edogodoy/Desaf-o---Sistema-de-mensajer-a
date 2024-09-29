@@ -10,6 +10,7 @@ body {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+    scrollbar-color: #cdc3e6 #ececec;
 }
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
@@ -18,18 +19,6 @@ h1, h2, h3, h4, h5, h6 {
 p {
     margin: 0;
     padding: 0;
-}
-
-.button {
-    padding: 0.75rem 1.5rem;
-    font-weight: bold;
-    color: #fff;
-    background-color: #007bff;
-    border-radius: 4px;
-    transition: background-color 0.3s;
-}
-.button:hover {
-    background-color: #0056b3;
 }
 
 
@@ -49,7 +38,76 @@ p {
     width: 40rem;
     height: 100%;
     background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
 }
+
+.user {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 4rem;
+    gap: 2rem;
+    border: #ececec solid 3px;
+    margin-bottom: -3px;
+}
+.user p:first-of-type {
+    font-size: 2rem;
+    font-weight: bold;
+}
+.user p:last-of-type {
+    color: #b6b6b6;
+}
+.user img {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.infocontact {
+    flex-grow: 1;
+}
+.icons i {
+    font-size: 3rem;
+    cursor: pointer;
+    margin: 0 0 0 1.5rem;
+    color: #b6b6b6;
+}
+
+.newchat {
+    padding: 6rem;
+    border: #ececec solid 3px;
+    margin-bottom: -3px;
+}
+.button {
+    padding: 3rem 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #a491d2;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    text-align: center;
+    cursor: pointer;
+}
+.button:hover {
+    background-color: #cdc3e6;
+}
+
+.contacts {
+    flex: 1;
+    overflow-y: auto;
+}
+.contacts {
+    scrollbar-width: none;
+}
+.contacts:hover {
+    scrollbar-width: thin;
+    
+    .contact {
+        border-right: none;
+    }
+}
+
 
 .contact {
     display: flex;
@@ -64,24 +122,15 @@ p {
     font-weight: bold;
 }
 .contact img {
-    width: 100px;
-    height: 100px;
+    width: 10rem;
+    height: 10rem;
     border-radius: 50%;
     object-fit: cover;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
+.contact .infocontact {
+    min-width: 20rem;
+    margin-right: 2rem;
+}
 
 
 
@@ -112,4 +161,7 @@ p {
     width: 80rem;
     text-align: center;
     margin: 0;
+}
+.screen p span {
+    font-weight: bold;
 }
